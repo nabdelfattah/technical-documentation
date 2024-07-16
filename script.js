@@ -1,11 +1,11 @@
 const allCodes = document.querySelectorAll('code')
 
 allCodes.forEach(codeEl =>{
-  const copyEl = document.createElement('img')
-  copyEl.src = './copy.svg'
-  copyEl.className = 'icon'
-  copyEl.addEventListener('click', ()=>{copyToClipboard(codeEl.innerText)})
-  codeEl.after(copyEl)
+  const copybtn = document.createElement('button')
+  copybtn.ariaLabel = 'copy to clipboard'
+  copybtn.innerHTML = `<img class='icon' src='./copy.svg' alt='copy icon'/>`
+  copybtn.addEventListener('click', ()=>{copyToClipboard(codeEl.innerText)})
+  codeEl.after(copybtn)
 })
 
 function copyToClipboard(text) {

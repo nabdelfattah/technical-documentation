@@ -79,6 +79,7 @@ pre {
   color: #e2e2e2;
   display: flex;
   gap: 10px;
+  align-items: flex-start;
 }
 
 @media screen and (max-width: 800px) {
@@ -109,5 +110,11 @@ pre {
 .icon {
   width: 20px;
   height: 20px;
+}
+button {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 }
